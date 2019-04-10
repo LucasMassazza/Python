@@ -8,11 +8,11 @@ def menu():
     print ("1. Estadistica Debito\n2. Estadistica Credito\n3. Estadistica Efectivo")
     seleccionMenu = input()
     if(seleccionMenu==1):
-        pagaronDebito(inicio.personasReservaron,inicio.pagosDebito)
+        pagaronDebito(inicio.personasTot, inicio.pagosDebito)
     elif(seleccionMenu==2):
-        pagaronCredito(inicio.personasReservaron,inicio.pagosCredito)
+        pagaronCredito(inicio.personasTot, inicio.pagosCredito)
     else:
-        pagaronEfectivo(inicio.personasReservaron,inicio.pagosEfectivo)
+        pagaronEfectivo(inicio.personasTot, inicio.pagosEfectivo)
 
 
 

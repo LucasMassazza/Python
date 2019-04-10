@@ -1,13 +1,18 @@
 import Menu
 import os
 import VariablesAccesibles
+import CalculoEstadisticas
+import sys
 
+
+caluloEstadisticas = CalculoEstadisticas
 menu = Menu
 variables = VariablesAccesibles
 
+
 pagosDebito = 0
 pagosCredito = 0
-personasReservaron = 0
+personasTot = 0
 pagosEfectivo = 0
 
 
@@ -23,10 +28,13 @@ def main():
         os.system("cls")
         tituloYSaludo()
         print ("1. Ingresar Datos\n2. Estadisticas\n0. Salir")
-        if(seleccionOpcionMenu == 1):
-            return 0
-        elif(seleccionOpcionMenu ==1):
-            menu.menu()
+        seleccionOpcionMenu = input()
+        if seleccionOpcionMenu == 1:
+           menu.menu()
+        elif seleccionOpcionMenu ==2:
+           caluloEstadisticas.menu()
+        else:
+           sys.exit()
 
 
 
