@@ -1,5 +1,5 @@
 import os
-import Menu
+import MenuDatos
 
 def main():
      """
@@ -46,14 +46,14 @@ def main():
 
         elif seleccionMenu == 0:
 
-            Menu.apellido = apellido
-            Menu.nombre = nombre
-            Menu.dni = dni
-            Menu.pasaporte = numeroPasaporte
-            Menu.fechaNacimiento = fechaNacimiento
-            Menu.mail = email
-            Menu.celular = celular
+            MenuDatos.apellido = apellido
+            MenuDatos.nombre = nombre
+            MenuDatos.dni = dni
+            MenuDatos.pasaporte = numeroPasaporte
+            MenuDatos.fechaNacimiento = fechaNacimiento
+            MenuDatos.mail = email
+            MenuDatos.celular = celular
             cierreMenu = True
 
         else:
-            os.close()
+            cierreMenu = True

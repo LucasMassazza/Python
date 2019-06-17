@@ -1,14 +1,11 @@
-import Menu
+import MenuDatos
 import os
-import VariablesAccesibles
 import CalculoEstadisticas
 import sys
 
 
 caluloEstadisticas = CalculoEstadisticas
-menu = Menu
-variables = VariablesAccesibles
-
+menu = MenuDatos
 
 pagosDebito = 0
 pagosCredito = 0

@@ -1,6 +1,6 @@
-import Inicio
+import MenuPrincipal
 
-inicio = Inicio
+inicio = MenuPrincipal
 
 
 def menu():
