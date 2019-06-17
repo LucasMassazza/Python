@@ -35,7 +35,7 @@ def tituloYSaludo():
     print ("\033[1;36m")
     print ("BIENVENIDOS A CHAU BIONDI").center(50,"=")
     print ("")
-    print ("\033[1;31m""SISTEMA DE RESERVA""\033[0m").center(60)
+    print ("\033[1;31m""SISTEMA DE RESERVA, CABOTAJE""\033[0m").center(60)
     print ("")                                                      
 
 main()
