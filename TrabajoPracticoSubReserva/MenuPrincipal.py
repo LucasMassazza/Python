@@ -15,8 +15,6 @@ pagosEfectivo = 0
 
 def main():
     cierrePrograma = False
-    cierreMenu = False
-    seleccionOpcionMenu = 0
     
     while cierrePrograma != True:
 

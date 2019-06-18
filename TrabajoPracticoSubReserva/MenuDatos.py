@@ -12,7 +12,7 @@ class DatosPerosnales:
     mail = ""
     celular = 0
 
-class DatosVuelo:
+class ClaseDatosVuelo:
     origen = ""
     destino = ""
     horaInicio = ""
@@ -46,7 +46,7 @@ def menu():
         if seleccionMenu == 1:
             DatosPersonales.main()
         elif seleccionMenu == 2:
-            DatosVuelo.main()
+            DatosVuelo.menu()
         elif seleccionMenu == 3:
             MediosDePago.main()
         elif seleccionMenu == 4:
