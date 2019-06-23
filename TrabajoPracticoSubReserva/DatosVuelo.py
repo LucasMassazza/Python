@@ -6,6 +6,10 @@ import MenuDatos
 variables = MenuDatos
 
 
+
+
+
+
 def menu():
 
     cierreMenu = False
@@ -103,6 +107,8 @@ def fechaVuelo():
 
     os.system("cls")
     print "Favor ingrese una fecha de Vuelo, en el formato DD/MM/AAAA: "
+
+
 
     variables.ClaseDatosVuelo.fecha = raw_input()
 

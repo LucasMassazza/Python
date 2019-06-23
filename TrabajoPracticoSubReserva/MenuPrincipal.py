@@ -4,15 +4,26 @@ import CalculoEstadisticas
 import sys
 
 
+#Los diferentes aviones que maneja la Empresa y Caracteristicas de capacidad
+class AvionBoeing:
+    max737 = {"filas":29 , "columnas": 6}
+class AvionAirbus:
+    Neo320 = {"filas": 41,"columnas" : 4}
+
+
+#Referencias a Objetos
 caluloEstadisticas = CalculoEstadisticas
 menu = MenuDatos
 
-pagosDebito = 0
-pagosCredito = 0
-personasTot = 0
-pagosEfectivo = 0
 
+#Variables globales
+class variablesVarias():
+    pagosDebito = 0
+    pagosCredito = 0
+    personasTot = 0
+    pagosEfectivo = 0
 
+#Codigo del menu de arranque
 def main():
     cierrePrograma = False
     
@@ -29,6 +40,8 @@ def main():
         else:
            sys.exit()
 
+
+#Generador del Titulo
 def tituloYSaludo():
     print ("\033[1;36m")
     print ("BIENVENIDOS A CHAU BIONDI").center(50,"=")

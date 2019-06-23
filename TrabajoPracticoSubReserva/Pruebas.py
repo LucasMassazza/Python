@@ -1,5 +1,14 @@
-
+import random
 import datetime
+
+
+#Tipos de Aviones
+class AvionBoeing:
+    max737 = {"filas":29 , "columnas": 6}
+class AvionAirbus:
+    Neo320 = {"filas": 41,"columnas" : 4}
+
+
 
 def fechaVuelo():
     FechaFinal = ""
@@ -14,10 +23,50 @@ def fechaVuelo():
     str(mesActual)
     str(anoActual)
 
+    FechaFinal = diaActual
+    FechaFinal += "/"
+    FechaFinal += mesActual
+    FechaFinal += "/"
+    FechaFinal += anoActual
 
 
 
     print FechaFinal
 
 
-fechaVuelo()
+def matriz():
+
+    matriz = [[1,2,3],[4,5,6]]
+
+    for x in range(len(matriz)):
+
+        for y in range(len(matriz[0])):
+
+            print matriz[x][y]
+
+
+#Creacion de Asientos ocupados / no ocupados
+def asientosAvion():
+
+    matrizAsientos = []
+
+    for x in range(AvionBoeing.max737.get("filas")):
+
+        filaTemporal = []
+
+        for y in range(AvionBoeing.max737.get("columnas")):
+
+            numeroTemporal = random.choice([True,False])
+            filaTemporal.append(numeroTemporal)
+
+
+        matrizAsientos.append(filaTemporal)
+
+    return matrizAsientos
+
+asientosAvion()
+
+
+# matrizAsientos.append(filaTemporal)
+ #           valorTemporal = random.randint(0,1)
+  #          matrizAsientos[x][y] = valorTemporal
