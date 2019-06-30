@@ -2,7 +2,6 @@ import MenuDatos
 import os
 import CalculoEstadisticas
 import sys
-import Asientos
 import random
 
 
@@ -12,9 +11,41 @@ class AvionBoeing:
 class AvionAirbus:
     Neo320 = {"filas": 41,"columnas" : 4}
 
+#Crea un avion con asientos aleatorios
+def llenadoAleatorioAvion():
+
+    matrizAsientos = []
+
+    for x in range(AvionBoeing.max737.get("filas")):
+
+        filaTemporal = []
+
+        for y in range(AvionBoeing.max737.get("columnas")):
+
+            numeroTemporal = random.choice([True,False])
+            filaTemporal.append(numeroTemporal)
+
+
+        matrizAsientos.append(filaTemporal)
+
+    return matrizAsientos
+
+#Avion con asientos Vacios
+def avionVacio ():
+
+    avion = []
+    for x in range(AvionBoeing.max737.get("columnas")):
+        listaTemporal = []
+        for y in random(AvionBoeing.max737.get("filas")):
+            listaTemporal.append(False)
+
+        avion.append(listaTemporal)
+
+    return avion
+
 
 #Avion generado o Importado
-avionViaje = Asientos.avionVacio()
+avionViaje = avionVacio()
 
 
 #Referencias a Objetos
@@ -60,39 +91,6 @@ def tituloYSaludo():
     print ("")
     print ("\033[1;31m""SISTEMA DE RESERVA, CABOTAJE""\033[0m").center(60)
     print ("")                                                      
-
-
-#Crea un avion con asientos aleatorios
-def llenadoAleatorioAvion():
-
-    matrizAsientos = []
-
-    for x in range(AvionBoeing.max737.get("filas")):
-
-        filaTemporal = []
-
-        for y in range(AvionBoeing.max737.get("columnas")):
-
-            numeroTemporal = random.choice([True,False])
-            filaTemporal.append(numeroTemporal)
-
-
-        matrizAsientos.append(filaTemporal)
-
-    return matrizAsientos
-
-#Avion con asientos Vacios
-def avionVacio ():
-
-    avion = []
-    for x in range(AvionBoeing.max737.get("columnas")):
-        listaTemporal = []
-        for y in random(AvionBoeing.max737.get("filas")):
-            listaTemporal.append(False)
-
-        avion.append(listaTemporal)
-
-    return avion
 
 
 main()
