@@ -108,8 +108,6 @@ def fechaVuelo():
     os.system("cls")
     print "Favor ingrese una fecha de Vuelo, en el formato DD/MM/AAAA: "
 
-
-
     variables.ClaseDatosVuelo.fecha = raw_input()
 
     #Falta realizar una comprobacion de lo que se ingresa, Ano dia y Fecha

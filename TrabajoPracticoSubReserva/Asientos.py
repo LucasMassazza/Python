@@ -1,9 +1,8 @@
 import MenuPrincipal
-import random
 import os
 
-import DatosVuelo
-import random
+
+
 
 
 def menuAsientos():

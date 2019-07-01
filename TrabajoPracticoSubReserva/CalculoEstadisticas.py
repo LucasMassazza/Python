@@ -1,18 +1,16 @@
 import MenuPrincipal
 
-inicio = MenuPrincipal
 
-
-def menu():
+def menuEstadisticas():
 
     print ("1. Estadistica Debito\n2. Estadistica Credito\n3. Estadistica Efectivo")
     seleccionMenu = input()
     if(seleccionMenu==1):
-        pagaronDebito(inicio.personasTot, inicio.pagosDebito)
+        pagaronDebito(MenuPrincipal.personasTot, MenuPrincipal.pagosDebito)
     elif(seleccionMenu==2):
-        pagaronCredito(inicio.personasTot, inicio.pagosCredito)
+        pagaronCredito(MenuPrincipal.personasTot, MenuPrincipal.pagosCredito)
     else:
-        pagaronEfectivo(inicio.personasTot, inicio.pagosEfectivo)
+        pagaronEfectivo(MenuPrincipal.personasTot, MenuPrincipal.pagosEfectivo)
 
 
 

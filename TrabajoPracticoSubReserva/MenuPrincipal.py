@@ -34,30 +34,26 @@ def llenadoAleatorioAvion():
 def avionVacio ():
 
     avion = []
-    for x in range(AvionBoeing.max737.get("columnas")):
+    for x in range(AvionBoeing.max737("columnas")):
         listaTemporal = []
-        for y in random(AvionBoeing.max737.get("filas")):
+        for y in random(AvionBoeing.max737("filas")):
             listaTemporal.append(False)
 
         avion.append(listaTemporal)
 
     return avion
 
-
 #Avion generado o Importado
 avionViaje = avionVacio()
-
 
 #Referencias a Objetos
 caluloEstadisticas = CalculoEstadisticas
 menu = MenuDatos
 
-
 class variablesAsiento():
 
     numero = 0
     letra = ""
-
 
 #Variables globales
 class variablesVarias():
@@ -79,7 +75,7 @@ def main():
         if seleccionOpcionMenu == 1:
            menu.menu()
         elif seleccionOpcionMenu ==2:
-           caluloEstadisticas.menu()
+           caluloEstadisticas.menuEstadisticas()
         else:
            sys.exit()
 
