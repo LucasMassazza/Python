@@ -38,6 +38,7 @@ def menu():
 
     #Menu de Datos Varios
     cierreMenu = False
+
     os.system("cls")
     while cierreMenu != True:
         os.system("cls")

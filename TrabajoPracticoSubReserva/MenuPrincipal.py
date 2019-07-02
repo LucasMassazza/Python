@@ -3,6 +3,7 @@ import os
 import CalculoEstadisticas
 import sys
 import random
+import time
 
 
 # Los diferentes aviones que maneja la Empresa y Caracteristicas de capacidad
@@ -47,11 +48,6 @@ def avionVacio():
 # Avion generado o Importado
 avionViaje = avionVacio()
 
-# Referencias a Objetos
-caluloEstadisticas = CalculoEstadisticas
-menu = MenuDatos
-
-
 class variablesAsiento():
     numero = 0
     letra = ""
@@ -76,11 +72,16 @@ def main():
         print ("1. Ingresar Datos\n2. Estadisticas\n0. Salir\n\n")
         seleccionOpcionMenu = input()
         if seleccionOpcionMenu == 1:
-            menu.menu()
+            MenuDatos.menu()
         elif seleccionOpcionMenu == 2:
-            caluloEstadisticas.menuEstadisticas()
-        else:
+            CalculoEstadisticas.menuEstadisticas()
+        elif seleccionOpcionMenu == 0:
             sys.exit()
+
+        else:
+
+            print "Favor ingrese una opcion correcta..."
+            time.sleep(3)
 
 
 # Generador del Titulo
