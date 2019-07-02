@@ -14,13 +14,17 @@ def main():
         if eleccionMenu == 1:
             MenuDatos.MedioPago.medio =  "Debito"
             cierreMenu = True
+            MenuDatos.medioDePago=True
 
         elif eleccionMenu == 2:
             MenuDatos.MedioPago.medio = "Credito"
             cierreMenu = True
+            MenuDatos.medioDePago = True
+
         elif eleccionMenu == 3:
             MenuDatos.MedioPago.medio = "Efectivo"
             cierreMenu = True
+            MenuDatos.medioDePago = True
 
         else:
             os.system("cls")

@@ -35,15 +35,14 @@ medioDePago = False
 
 
 def menu():
-
-    #Menu de Datos Varios
+    from MenuPrincipal import variablesVarias
     cierreMenu = False
 
     os.system("cls")
 
     while cierreMenu != True:
         os.system("cls")
-        print ("1. Datos Personales\n2. Datos de Vuelo\n3. Medio de Pago\n4. Impresion Ticket\n0. Volver al Menu Principal\n")
+        print ("1. Datos Personales\n2. Datos de Vuelo\n3. Medio de Pago\n4. Realizar Reserva\n0. Volver al Menu Principal\n")
         seleccionMenu = input()
 
         if seleccionMenu == 1:
@@ -55,9 +54,16 @@ def menu():
         elif seleccionMenu == 4:
 
             if datosPersonales and datosVuelo and medioDePago:
-                ImpresionTicket()
 
-        #En caso de faltar algun dato, se le muestra al usuario los datos faltantes, Falta a que se le redirija automaticamente
+                if MedioPago.medio == "Debito":
+                    variablesVarias.pagosDebito+=1
+                elif MedioPago.medio == "Credito":
+                    variablesVarias.pagosCredito += 1
+                else:
+                    variablesVarias.pagosEfectivo += 1
+
+
+
 
             else:
                 if not datosPersonales:
@@ -82,7 +88,6 @@ def menu():
             time.sleep(3)
             os.system("cls")
 
-def ImpresionTicket():
-    return 0
+
 
 
