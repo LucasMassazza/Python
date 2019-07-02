@@ -4,6 +4,7 @@ import DatosVuelo
 import MediosDePago
 import time
 
+
 class DatosPerosnales:
     nombre = ""
     apellido = ""
@@ -40,6 +41,7 @@ def menu():
     cierreMenu = False
 
     os.system("cls")
+
     while cierreMenu != True:
         os.system("cls")
         print ("1. Datos Personales\n2. Datos de Vuelo\n3. Medio de Pago\n4. Impresion Ticket\n0. Volver al Menu Principal\n")

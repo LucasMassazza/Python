@@ -18,7 +18,7 @@ def main():
 
 
         # Tipo de Datos a Ingresar, falta arreglar la vuelta al otro metodo.
-        print ("1. Nombre y Apellido\n2. DNI o PASAPORTE\n3. Fecha Nacimiento\n4. Celular\n5. E-Mail\n0. Atras\n00. Salir")
+        print ("1. Nombre y Apellido\n2. DNI o PASAPORTE\n3. Fecha Nacimiento\n4. Celular\n5. E-Mail\n0. Atras\n00. Salir sin guardar\n")
         seleccionMenu = input()
 
         if seleccionMenu == 1:

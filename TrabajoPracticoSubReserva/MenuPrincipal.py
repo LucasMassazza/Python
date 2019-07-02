@@ -35,7 +35,7 @@ def llenadoAleatorioAvion():
 # Avion con asientos Vacios
 def avionVacio():
     avion = []
-    for x in range(AvionBoeing.max737.get("filas")):
+    for x in range(AvionBoeing.max737.get("columnas")):
         listaTemporal = []
         for y in range (AvionBoeing.max737.get("filas")):
             listaTemporal.append(False)
@@ -69,7 +69,7 @@ def main():
     while cierrePrograma != True:
 
         os.system("cls")
-        tituloYSaludo()
+        tituloYSaludo("Nos paga para volar, no para servirle")
         print ("1. Ingresar Datos\n2. Estadisticas\n0. Salir\n\n")
         seleccionOpcionMenu = input()
         if seleccionOpcionMenu == 1:
@@ -86,11 +86,12 @@ def main():
 
 
 # Generador del Titulo
-def tituloYSaludo():
+def tituloYSaludo(subtitulo):
+
     print ("\033[1;36m")
     print ("BIENVENIDOS A CHAU BIONDI").center(50, "=")
     print ("")
-    print ("\033[1;31m""SISTEMA DE RESERVA, CABOTAJE""\033[0m").center(60)
+    print ("\033[1;31mNos paga por volar, no para servir\033[0m").center(60)
     print ("")
 
 

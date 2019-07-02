@@ -2,7 +2,7 @@
 import os
 import time
 import MenuDatos
-import MenuPrincipal
+
 
 variables = MenuDatos
 
@@ -93,7 +93,7 @@ def origenYDestino(): #En esta funcion se ingresan los datos de Origen y Destino
          elif eleccion == 0:
 
              if variables.ClaseDatosVuelo.origen == variables.ClaseDatosVuelo.destino:
-
+                 os.system("cls")
                  print "Debe ingresar un Origen distinto al Destino o Viceversa..."
                  time.sleep(3)
              else:
@@ -115,7 +115,7 @@ def horaVuelo():
     variables.ClaseDatosVuelo.horaInicio = raw_input()
 
 def menuAsientos():
-
+    import MenuPrincipal
     os.system("cls")
     for x in range(MenuPrincipal.avionViaje("filas")):
 

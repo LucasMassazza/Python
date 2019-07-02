@@ -1,8 +1,8 @@
-import MenuPrincipal
+
 import os
 
 def menuEstadisticas():
-
+    import MenuPrincipal
     os.system("cls")
     print ("1. Estadistica Debito\n2. Estadistica Credito\n3. Estadistica Efectivo")
     seleccionMenu = input()
