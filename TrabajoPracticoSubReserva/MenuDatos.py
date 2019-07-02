@@ -2,6 +2,7 @@ import os
 import DatosPersonales
 import DatosVuelo
 import MediosDePago
+import time
 
 class DatosPerosnales:
     nombre = ""
@@ -40,7 +41,7 @@ def menu():
     os.system("cls")
     while cierreMenu != True:
         os.system("cls")
-        print ("1. Datos Personales\n2. Datos de Vuelo\n3. Medio de Pago\n4. Impresion Ticket\n0. Salir\n")
+        print ("1. Datos Personales\n2. Datos de Vuelo\n3. Medio de Pago\n4. Impresion Ticket\n0. Volver al Menu Principal\n")
         seleccionMenu = input()
 
         if seleccionMenu == 1:
@@ -69,9 +70,15 @@ def menu():
                     os.system("cls")
                     print("No dio a conocer el medio de pago, favor de seleccionar alguno...")
 
-        else:
+
+
+        elif seleccionMenu == 0:
             cierreMenu = True
 
+        else:
+            print "Favor ingrese una opcion valida..."
+            time.sleep(3)
+            os.system("cls")
 
 def ImpresionTicket():
     return 0
