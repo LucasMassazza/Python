@@ -22,22 +22,25 @@ def menuEstadisticas():
 
 
 def pagaronDebito(pagaronTot,debito):
-    from MenuPrincipal import variablesVarias
+
     porcentaje = (pagaronTot*debito)/100
     os.system("cls")
-    print ("Pagaron con Debito el"+porcentaje+"%, de"+variablesVarias.personasTot)
+    total = str(pagaronTot)
+    print "Pagaron con Debito el",porcentaje,"%, de ",total
     time.sleep(3)
 
 def pagaronCredito(pagaronTot,credito):
-    from MenuPrincipal import variablesVarias
+
     porcentaje = (pagaronTot*credito)/100
+    total = str(pagaronTot)
     os.system("cls")
-    print ("Pagaron con Credito el"+porcentaje+"%, de"+variablesVarias.personasTot)
+    print "Pagaron con Credito el",porcentaje,"%, de ",total
     time.sleep(3)
 
 def pagaronEfectivo(pagaronTot,efectivo):
-    from MenuPrincipal import variablesVarias
-    porcentaje = (pagaronTot,efectivo)
+
+    porcentaje = (pagaronTot*efectivo)/100
     os.system("cls")
-    print ("Pagaron en Efectivo el"+porcentaje+"%, de"+variablesVarias.personasTot)
+    total = str(pagaronTot)
+    print "Pagaron en Efectivo el",porcentaje,"%, de ",total
     time.sleep(3)
