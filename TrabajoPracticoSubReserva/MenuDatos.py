@@ -28,14 +28,13 @@ class MedioPago:
     medio = ""
     monto = 0
 
+#Variables Para impresion Ticket
+datosPersonales = False
+datosVuelo = False
+medioDePago = False
+
 
 def menu():
-
-    #Variables Para impresion Ticket
-
-    datosPersonales = False
-    datosVuelo = False
-    medioDePago = False
 
     #Menu de Datos Varios
     cierreMenu = False
