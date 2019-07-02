@@ -1,6 +1,7 @@
 import os
 import time
 import MenuDatos
+from datetime import datetime, date, timedelta
 
 
 def menu():
@@ -26,7 +27,6 @@ def menu():
 
         else:
             return 0
-
 
 def origenYDestino():  # En esta funcion se ingresan los datos de Origen y Destino
     os.system("cls")
@@ -97,53 +97,281 @@ def origenYDestino():  # En esta funcion se ingresan los datos de Origen y Desti
             else:
                 cierreMenu = True
 
-
 def fechaVuelo():
     os.system("cls")
     fecha = ""
     print "Favor ingrese una fecha de Vuelo, en el formato DD/MM/AAAA: "
     fecha = raw_input()
 
+    fechaActual = datetime.now().date()
 
-    MenuDatos.ClaseDatosVuelo.fecha = fecha
+    if len(fecha) == 10:
 
+        if fecha[2] and fecha[5] == "/":
 
+            mes = fecha[3:5]
+            mes = int(mes)
 
+            dia = fecha[0:2]
+            dia = int(dia)
 
-    # Falta realizar una comprobacion de lo que se ingresa, Ano dia y Fecha
+            ano = fecha[6:10]
+            ano = int(ano)
 
+            if ano == fechaActual.year:
+
+                if mes == fechaActual.month:
+
+                    if numeroPar(mes):
+
+                        if dia > fechaActual.day and dia <= 30:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                    else:
+
+                        if dia > fechaActual.day and dia <= 31:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                elif mes > fechaActual.month:
+
+                    if numeroPar(mes):
+
+                        if 0 < dia <= 30:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                    else:
+
+                        if 0 < dia <= 31:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                else:
+                    os.system("cls")
+                    print "Ingreso un mes menor al actual, favor intente nuevamente..."
+                    time.sleep(3)
+
+            elif ano > fechaActual.year:
+
+                if 0 < mes <= 12:
+
+                    if numeroPar(mes):
+
+                        if fechaActual.day < dia <= 30:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                    else:
+
+                        if fechaActual.day < dia <= 31:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+            else:
+                os.system("cls")
+                print "Ingreso el ano de manera erronea, Intente nuevamente..."
+                time.sleep(3)
+
+        else:
+            os.system("cls")
+            print "No se ingreso bien el formato DD/MM/AAAA..."
+            time.sleep(3)
+
+    elif len(fecha) == 8:
+
+        if fecha[1] and fecha[3] == "/":
+
+            mes = fecha[2]
+            mes = int(mes)
+
+            dia = fecha[0]
+            dia = int(dia)
+
+            ano = fecha[4:8]
+            ano = int(ano)
+
+            if ano == fechaActual.year:
+
+                if mes == fechaActual.month:
+
+                    if numeroPar(mes):
+
+                        if dia > fechaActual.day and dia <= 30:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                    else:
+
+                        if dia > fechaActual.day and dia <= 31:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                elif mes > fechaActual.month:
+
+                    if numeroPar(mes):
+
+                        if 0 < dia <= 30:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                    else:
+
+                        if 0 < dia <= 31:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                else:
+                    os.system("cls")
+                    print "Ingreso un mes menor al actual, favor intente nuevamente..."
+                    time.sleep(3)
+
+            elif ano > fechaActual.year:
+
+                if 0 < mes <= 12:
+
+                    if numeroPar(mes):
+
+                        if 0 < dia <= 30:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+                    else:
+
+                        if 0 < dia <= 31:
+
+                            MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+                        else:
+                            os.system("cls")
+                            print "Ingreso el dia de manera erronea, favor reintentar..."
+                            time.sleep(3)
+
+            else:
+                os.system("cls")
+                print "Ingreso el ano de manera erronea, Intente nuevamente..."
+                time.sleep(3)
+
+        else:
+            os.system("cls")
+            print "No se ingreso bien el formato DD/MM/AAAA..."
+            time.sleep(3)
+
+    else:
+
+        if len(fecha) < 8:
+            os.system("cls")
+            print "Ingreso algun digito de menos, favor reintentar..."
+            time.sleep(3)
+
+        else:
+            os.system("cls")
+            print "Ingreso algun digito de mas, favor reintentar..."
+            time.sleep(3)
 
 def horaVuelo():
     os.system("cls")
     print "Ingresar hora de vuelo (HH:MM): "
-    MenuDatos.ClaseDatosVuelo.horaInicio = raw_input()
 
+    hora = raw_input()
+
+    horas = hora[0:2]
+    horas = int(horas)
+
+    minutos = hora[3:5]
+    minutos = int(minutos)
+
+    if (0 <= horas < 24 ) and (0 <= minutos < 60):
+
+        MenuDatos.ClaseDatosVuelo.horaInicio = hora
+
+    else:
+        os.system("cls")
+        print "Ingreso mal la hora de la reserva, intente nuevamente..."
+        time.sleep(3)
 
 def menuAsientos():
-    import MenuPrincipal
+    from MenuPrincipal import avionViaje
+    from MenuPrincipal import variablesAsiento
     os.system("cls")
-    for x in range(MenuPrincipal.avionViaje("filas")):
+    for x in range(avionViaje("filas")):
 
-        for y in range(MenuPrincipal.avionViaje("columnas")):
+        for y in range(avionViaje("columnas")):
 
-            if MenuPrincipal.avionViaje[x][y] == True:
+            if avionViaje[x][y]:
 
-                if MenuPrincipal.avionViaje[x][y] == 1:
-                    MenuPrincipal.variablesAsiento.letra = "A"
-                if MenuPrincipal.avionViaje[x][y] == 2:
-                    MenuPrincipal.variablesAsiento.letra = "B"
-                if MenuPrincipal.avionViaje[x][y] == 3:
-                    MenuPrincipal.variablesAsiento.letra = "C"
-                if MenuPrincipal.avionViaje[x][y] == 4:
-                    MenuPrincipal.variablesAsiento.letra = "D"
-                if MenuPrincipal.avionViaje[x][y] == 5:
-                    MenuPrincipal.variablesAsiento.letra = "E"
-                if MenuPrincipal.avionViaje[x][y] == 6:
-                    MenuPrincipal.variablesAsiento.letra = "F"
+                if avionViaje[x][y] == 1:
+                    variablesAsiento.letra = "A"
+                if avionViaje[x][y] == 2:
+                    variablesAsiento.letra = "B"
+                if avionViaje[x][y] == 3:
+                    variablesAsiento.letra = "C"
+                if avionViaje[x][y] == 4:
+                    variablesAsiento.letra = "D"
+                if avionViaje[x][y] == 5:
+                    variablesAsiento.letra = "E"
+                if avionViaje[x][y] == 6:
+                    variablesAsiento.letra = "F"
 
-                MenuPrincipal.variablesAsiento.numero = x
+                variablesAsiento.numero = x
 
-    print ("Su codigo de asiento es: ", MenuPrincipal.variablesAsiento.letra, MenuPrincipal.variablesAsiento.numero)
+    print ("Su codigo de asiento es: ", variablesAsiento.letra, variablesAsiento.numero)
 
     print ("\n\nPara volver al Menu presionar ENTER")
     salir = input()
