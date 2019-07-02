@@ -100,9 +100,22 @@ def origenYDestino():  # En esta funcion se ingresan los datos de Origen y Desti
 
 def fechaVuelo():
     os.system("cls")
+    fecha = ""
     print "Favor ingrese una fecha de Vuelo, en el formato DD/MM/AAAA: "
+    fecha = raw_input()
 
-    MenuDatos.ClaseDatosVuelo.fecha = raw_input()
+
+    if len(fecha) == 10:
+
+        if fecha[2] and fecha[5] == "/":
+
+            if fecha[3:] <=31
+
+
+    MenuDatos.ClaseDatosVuelo.fecha = fecha
+
+
+
 
     # Falta realizar una comprobacion de lo que se ingresa, Ano dia y Fecha
 
@@ -143,3 +156,10 @@ def menuAsientos():
     salir = input()
 
     os.system("cls")
+
+def numeroPar(num):
+
+    if num % 0:
+        return True
+
+    return False
