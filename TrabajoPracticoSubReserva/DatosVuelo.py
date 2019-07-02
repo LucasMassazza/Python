@@ -111,7 +111,7 @@ def fechaVuelo():
 def horaVuelo():
 
     os.system("cls")
-    print "Ingresar hora de vuelo: "
+    print "Ingresar hora de vuelo (HH:MM): "
     variables.ClaseDatosVuelo.horaInicio = raw_input()
 
 def menuAsientos():
