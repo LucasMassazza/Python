@@ -51,7 +51,7 @@ def main():
                 os.system("cls")
                 dni = input("Ingrese DNI: ")
 
-                if len(dni) < 7 or len(dni) > 8:
+                if dni > 100000000:
                     os.system("cls")
                     print "Ingrese un DNI correcto..."
                     dni = 0
@@ -89,7 +89,7 @@ def main():
 
         elif seleccionMenu == 0:
 
-            if nombreV and apellidoV and emailV and dniV and fechaNacimientoV and celularV:
+            if nombreV and apellidoV and emailV and fechaNacimientoV and celularV:
 
                 if dniV or numeroPasaporteV:
 

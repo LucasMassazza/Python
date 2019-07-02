@@ -380,7 +380,7 @@ def menuAsientos():
 
 def numeroPar(num):
 
-    if num % 0:
+    if num % 2 == 0:
         return True
 
     return False
