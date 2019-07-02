@@ -69,7 +69,7 @@ def main():
     while cierrePrograma != True:
 
         os.system("cls")
-        tituloYSaludo("Nos paga para volar, no para servirle")
+        tituloYSaludo()
         print ("1. Ingresar Datos\n2. Estadisticas\n0. Salir\n\n")
         seleccionOpcionMenu = input()
         if seleccionOpcionMenu == 1:
@@ -86,7 +86,7 @@ def main():
 
 
 # Generador del Titulo
-def tituloYSaludo(subtitulo):
+def tituloYSaludo():
 
     print ("\033[1;36m")
     print ("BIENVENIDOS A CHAU BIONDI").center(50, "=")
