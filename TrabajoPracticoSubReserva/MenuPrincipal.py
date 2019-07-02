@@ -1,4 +1,4 @@
-import MenuDatos
+
 import os
 import CalculoEstadisticas
 import sys
@@ -63,6 +63,7 @@ class variablesVarias():
 
 # Codigo del menu de arranque
 def main():
+    import MenuDatos
     cierrePrograma = False
 
     while cierrePrograma != True:
