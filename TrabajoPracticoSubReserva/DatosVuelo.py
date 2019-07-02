@@ -105,13 +105,6 @@ def fechaVuelo():
     fecha = raw_input()
 
 
-    if len(fecha) == 10:
-
-        if fecha[2] and fecha[5] == "/":
-
-            if fecha[3:] <=31
-
-
     MenuDatos.ClaseDatosVuelo.fecha = fecha
 
 
