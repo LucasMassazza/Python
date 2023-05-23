@@ -1,11 +1,6 @@
 def OrdenamientoLista(Lista):
 
-    Lista = Lista
     ListaSum = []
-
-
-    ## Completar con código
-
     Indice = 0
 
 
@@ -18,14 +13,20 @@ def OrdenamientoLista(Lista):
     ListaSum.sort()
     print(ListaSum.sort)
 
+oracion = {"Hola como estas"}
 
 
 
+def VocalesOracion(oracion):
+
+    lista = []
+    lista = oracion.split()
+    print(oracion)
+
+VocalesOra
 
 
+def Multiplos(Lista):
 
-
-
-
-
+    for lista in 
 
