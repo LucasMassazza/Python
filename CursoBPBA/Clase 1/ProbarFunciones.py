@@ -23,10 +23,4 @@ def VocalesOracion(oracion):
     lista = oracion.split()
     print(oracion)
 
-VocalesOra
-
-
-def Multiplos(Lista):
-
-    for lista in 
 
