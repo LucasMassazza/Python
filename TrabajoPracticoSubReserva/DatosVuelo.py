@@ -92,7 +92,7 @@ def origenYDestino():  # En esta funcion se ingresan los datos de Origen y Desti
 
             if MenuDatos.ClaseDatosVuelo.origen == MenuDatos.ClaseDatosVuelo.destino:
                 os.system("cls")
-                print "Debe ingresar un Origen distinto al Destino o Viceversa..."
+                print ("Debe ingresar un Origen distinto al Destino o Viceversa..."
                 time.sleep(3)
             else:
                 cierreMenu = True
@@ -100,7 +100,7 @@ def origenYDestino():  # En esta funcion se ingresan los datos de Origen y Desti
 def fechaVuelo():
     os.system("cls")
     fecha = ""
-    print "Favor ingrese una fecha de Vuelo, en el formato DD/MM/AAAA: "
+    print ("Favor ingrese una fecha de Vuelo, en el formato DD/MM/AAAA: ")
     fecha = raw_input()
 
     fechaActual = datetime.now().date()

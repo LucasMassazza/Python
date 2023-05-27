@@ -81,7 +81,7 @@ def main():
 
         else:
 
-            print "Favor ingrese una opcion correcta..."
+            print ("Favor ingrese una opcion correcta...")
             time.sleep(3)
 
 

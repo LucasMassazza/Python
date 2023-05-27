@@ -32,7 +32,7 @@ def Ejercicio3(oracion):
             VocalesMay.append(char.upper())
 
 def Ejercicio4(numeros, divisor):
-    
+
     multiplos = [multiplo for multiplo in numeros if multiplo % divisor == 0]
     multiplosFiltrador = []
 
@@ -40,9 +40,18 @@ def Ejercicio4(numeros, divisor):
         if multiplos[x] not in multiplosFiltrador:
             multiplosFiltrador.append(multiplos[x])
 
-    print(multiplos)
     multiplosFiltrador.sort()
     multiplosFiltrador
 
+def Ejercicio5(lista):
+    contador = 0
+    for indice in lista:
+        if isinstance(indice,(int, str)):
+            if isinstance(indice, str) and indice.islower():
+                contador = contador + 1
+            if isinstance(indice, int) and isinstance(indice, float) == bool():
+                contador = contador + 1
+
+    contador
 
 
